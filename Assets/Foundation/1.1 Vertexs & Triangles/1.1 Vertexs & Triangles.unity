@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 1169524098}
   - component: {fileID: 1169524097}
   m_Layer: 0
-  m_Name: Mesh
+  m_Name: Single Triangles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
