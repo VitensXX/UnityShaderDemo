@@ -1,2 +1,2 @@
 # UnityShaderDemo
-Unity Shader 基础的一些概念与操作。
+Unity Shader 的一些基础概念与操作。
