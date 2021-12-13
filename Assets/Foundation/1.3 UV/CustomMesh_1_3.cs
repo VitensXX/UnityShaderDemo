@@ -31,18 +31,24 @@ public class CustomMesh_1_3 : MonoBehaviour
         triangles[4] = 2;
         triangles[5] = 3;
 
-        //设置顶点颜色，上面两个顶点设为红色，下面两个顶点设为白色
-        //注意：创建出来的默认的UnlitShader里面是没有将顶点颜色参与计算，所以需要稍稍修改shader才能看到效果。
-        Color[] colors = new Color[4];
-        colors[0] = Color.white;//左下角
-        colors[1] = Color.red;//左上角
-        colors[2] = Color.red;//右上角
-        colors[3] = Color.white;//右下角
+        // //设置顶点UV坐标
+        // Vector2[] uv = new Vector2[4];
+        // uv[0] = new Vector2(0, 0);//左下角
+        // uv[1] = new Vector2(0, 1);//左上角
+        // uv[2] = new Vector2(1, 1);//右上角
+        // uv[3] = new Vector2(1, 0);//右下角
+
+        //修改顶点的uv坐标，大概只显示中间部分
+        Vector2[] uv = new Vector2[4];
+        uv[0] = new Vector2(0, 0.35f);//左下角
+        uv[1] = new Vector2(0, 0.65f);//左上角
+        uv[2] = new Vector2(1, 0.65f);//右上角
+        uv[3] = new Vector2(1, 0.35f);//右下角
        
         //赋值顶点和三角形数据
         mesh.vertices = vertices;
         mesh.triangles = triangles;
-        mesh.colors = colors;
+        mesh.uv = uv;
 
         return mesh;
     }
